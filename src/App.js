@@ -4,7 +4,7 @@ import Main from './Pages/Main';
 import AuthRoute from './Routes/AuthRoutes';
 const App = () => {
   const authToken = useSelector(state => state?.user?.token);
-  if (!authToken)
+  if (authToken)
     return (
       <Main />
     )

@@ -1,19 +1,6 @@
 import NavItem from "../Navbar/NavItems"
-import {
-    Box,
-    CloseButton,
-    Flex,
-    useColorModeValue,
-    Text,
-} from '@chakra-ui/react'
-import {
-    FiHome,
-    FiTrendingUp,
-    FiCompass,
-    FiStar,
-    FiSettings,
-    FiShoppingCart
-} from 'react-icons/fi'
+import { Box, CloseButton, Flex, useColorModeValue, Text } from '@chakra-ui/react'
+import { FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings, FiShoppingCart } from 'react-icons/fi'
 const LinkItems = [
     { name: 'Home', icon: FiHome, link: '/' },
     { name: 'Users', icon: FiTrendingUp, link: '/users' },

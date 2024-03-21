@@ -3,8 +3,10 @@ import {
     Flex,
     Icon,
 } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 const NavItem = ({ icon, link, children, ...rest }) => {
+    const location = useLocation();
+    console.log(location.pathname)
     return (
         <Link to={`${link}`}
             as="a"
@@ -13,23 +15,22 @@ const NavItem = ({ icon, link, children, ...rest }) => {
             _focus={{ boxShadow: 'none' }}>
             <Flex
                 align="center"
-                p="4"
+                transition="all 0.2s linear"
+                p="3"
                 mx="4"
-                borderRadius="lg"
                 role="group"
                 cursor="pointer"
+                bg={location.pathname === `${link}` ? 'cyan.400' : ''}
+                color={location.pathname === `${link}` ? 'white' : ''}
                 _hover={{
-                    bg: 'cyan.400',
-                    color: 'white',
+                    bg: location.pathname !== `${link}` ? 'gray.100' : ''
                 }}
                 {...rest}>
                 {icon && (
                     <Icon
                         mr="4"
                         fontSize="16"
-                        _groupHover={{
-                            color: 'white',
-                        }}
+
                         as={icon}
                     />
                 )}
