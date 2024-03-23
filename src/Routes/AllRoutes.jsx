@@ -1,15 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+import AddPost from "../Pages/AddPost";
 import CartPage from "../Pages/Cart";
 import Home from "../Pages/Home";
+import Posts from "../Pages/Posts";
 const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/cart" element={<CartPage />} />
-      <Route path="/users" element={<CartPage />} />
-      <Route path="/settings" element={<CartPage />} />
-      <Route path="/favorites" element={<CartPage />} />
-      <Route path="/explore" element={<CartPage />} />
+      <Route path="/users" element={<Home />} />
+      <Route path="/posts" element={<Posts />} />
+      <Route path="/add-post/:postId?" element={<AddPost />} />
+      <Route path="/events" element={<CartPage />} />
     </Routes>
   );
 };

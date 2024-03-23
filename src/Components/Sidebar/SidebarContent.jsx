@@ -1,13 +1,11 @@
 import NavItem from "../Navbar/NavItems"
 import { Box, CloseButton, Flex, useColorModeValue, Text } from '@chakra-ui/react'
-import { FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings, FiShoppingCart } from 'react-icons/fi'
+import { FiHome,  FiStar, FiUser } from 'react-icons/fi'
 const LinkItems = [
     { name: 'Home', icon: FiHome, link: '/' },
-    { name: 'Users', icon: FiTrendingUp, link: '/users' },
-    { name: 'Explore', icon: FiCompass, link: '/explore' },
-    { name: 'Favourites', icon: FiStar, link: '/favorites' },
-    { name: 'Settings', icon: FiSettings, link: '/settings' },
-    { name: 'Cart', icon: FiShoppingCart, link: '/cart' },
+    { name: 'Users', icon: FiUser, link: '/users' },
+    { name: 'Posts', icon: FiStar, link: '/posts' },
+    { name: 'Events', icon: FiStar, link: '/events' },
 ]
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
